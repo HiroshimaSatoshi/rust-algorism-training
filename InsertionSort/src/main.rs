@@ -5,12 +5,8 @@ macro_rules! trace {
     ($e1: expr, $e2: expr) => {
         let mut line: String = "".to_string();
         for i in 0..$e2 {
-            if i > 0 {
-                println!(" ");
-            }
-            line = line + &$e1[i].to_string();
+            line = line + " " + &$e1[i].to_string();
         }
-
         println!("{}", line);
     };
 }
